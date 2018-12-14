@@ -15,7 +15,6 @@ export default class ListaTelefinicaTable extends Component{
 
         const { source } = this.props;
         const options = { noDataText: 'Nenhum contato encontrado.',  };
-        console.log(source);
         return( 
             <div>
                 <BootstrapTable data={source} options={options} hover condensed pagination>
@@ -23,36 +22,28 @@ export default class ListaTelefinicaTable extends Component{
                         className="text-xs-center"
                         columnClassName="text-xs-center"
                         isKey
-                        dataField='CODIGO'
+                        dataField='Codigo'
                         hidden>
                         Código
                     </TableHeaderColumn> 
                     <TableHeaderColumn
                         className="text-xs-center"
                         columnClassName="text-xs-center"
-                        dataField='NOME'  
+                        dataField='Nome'  
                         tdStyle={ { whiteSpace: 'normal' } } >
                         Nome
                     </TableHeaderColumn>                               
                     <TableHeaderColumn 
                         className="text-xs-center" 
                         columnClassName="text-xs-center"
-                        dataField='TELEFONE'
+                        dataField='Telefone'
                         tdStyle={ { whiteSpace: 'normal' } } >
                         Telefone
                     </TableHeaderColumn>
                     <TableHeaderColumn 
                         className="text-xs-center" 
                         columnClassName="text-xs-center"
-                        dataField='CELULAR' 
-                        tdStyle={ { whiteSpace: 'normal' } }
-                        >                        
-                        Celular
-                    </TableHeaderColumn>
-                    <TableHeaderColumn 
-                        className="text-xs-center" 
-                        columnClassName="text-xs-center"
-                        dataField='DATA_NASCIMENTO'
+                        dataField='DataNascimento'
                         tdStyle={ { whiteSpace: 'normal' } }
                         >
                         Data Nascimento

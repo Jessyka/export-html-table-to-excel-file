@@ -14,9 +14,24 @@ class PaginaInicial extends Component{
 
 
     render(){
-        const { contatos }  = this.props;
         
-        console.log(contatos);
+        
+        if(!this.props.contatos)
+        {
+            return (
+                <div className="container">
+                &nbsp;&nbsp;
+                    <div className="row" style={{ position: 'relative', paddingBottom: 0 }}>
+                        <div className="col-md-8">
+                            <h4>Exportar HTML table para arquivo Excel</h4>
+                        </div>
+                    </div> 
+                </div>
+            );
+        }
+
+        const { contatos }  = this.props;
+
         return(
             <div className="container">
                 &nbsp;&nbsp;
@@ -43,11 +58,7 @@ class PaginaInicial extends Component{
 }
 
 function select(state) {
-    
-    const contatos = (state.contatos) ?
-        (state.contatos) : [];
-        
-    return { contatos };
+    return { contatos : state.contatos.listaContatos ? state.contatos.listaContatos : [] };
 }
 
 export default connect(select)(PaginaInicial);

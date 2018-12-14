@@ -41,7 +41,6 @@ export default class ExportHtmlToExcel extends Component{
         rows = "<tr>";
         rows += "<th bgcolor='#D3D3D3'> NOME </th>";
         rows += "<th bgcolor='#D3D3D3'> TELEFONE </th>";
-        rows += "<th bgcolor='#D3D3D3'> CELULAR </th>";
         rows += "<th bgcolor='#D3D3D3'> DATA_NASCIMENTO </th>";
         rows += '</tr>';
 
@@ -52,10 +51,9 @@ export default class ExportHtmlToExcel extends Component{
         source.map((item, i) => {
 
             rows += '<tr>'
-            + '<td>' + item.NOME + '</td>'
-            + '<td>' + item.TELEFONE + '</td>'
-            + '<td>' + item.CELULAR + '</td>'
-            + '<td>' + item.DATA_NASCIMENTO + '</td>'
+            + '<td>' + item.Nome + '</td>'
+            + '<td>' + item.Telefone + '</td>'
+            + '<td>' + item.DataNascimento + '</td>'
             + '</tr>';
         });
 
